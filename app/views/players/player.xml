@@ -1,0 +1,25 @@
+<Page loaded="loaded">
+
+    <StackLayout>
+
+        <Label text="Add Players to Your Game:" />
+
+        <GridLayout columns="*, 120" rows="80">
+            <TextField row="0" col="0" id="player" text="{{ player }}" hint="Player Name" />
+            <Button row="0" col="1" text="Add" tap="add" class="add" />
+        </GridLayout>
+
+        <ListView items="{{ playerList }}" id="playerList" >
+            <ListView.itemTemplate>
+                <GridLayout columns="*, 40" rows="80">
+                    
+                    <Label row="0" col="0" text="{{ name }}" class="white" />
+                    <Image row="0" col="1" src="res://ic_menu_delete" ios:visibility="collapsed" tap="delete" stretch="none" />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+
+        <Button text="Done" tap="done" class="done" />
+
+    </StackLayout>
+</Page>

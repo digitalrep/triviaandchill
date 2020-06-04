@@ -1,0 +1,57 @@
+Button {
+	width: 100%;
+}
+ListView {
+    width: 90%;
+    height: 55%;
+    height: 260;
+    opacity: 0;
+}
+TextView {
+    width: 90%;
+    line-height: 3;
+    font-size: 22sp;
+    border: 0;
+}
+.heading {
+    margin: 22;
+    font-size: 22sp;
+    opacity: 0;
+    color: #fff;
+}
+.player {
+    color: #fff;
+    margin: 12;
+    font-size: 22sp;
+    line-height: 2;
+}
+.pink {
+    background-color: #fe6d74;
+}
+.skin {
+    background-color: #f8be97;
+}
+.lightblue {
+    background-color: #4e9e9c;
+}
+.green1 {
+    background-color: #62bd7a;
+}
+.green2 {
+    background-color: #8ac142;;
+}
+.orange {
+    background-color: #fb882a;
+}
+.purple {
+    background-color: #614370;
+}
+.darkred {
+    background-color: #a32f2a;
+}
+.yellow {
+    background-color: #c6952e;
+}
+.brown {
+    background-color: #9f553d;
+}

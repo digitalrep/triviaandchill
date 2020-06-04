@@ -1,0 +1,12 @@
+﻿Page {
+    background-color: #fe6d79;
+}
+Button {
+    padding: 20 0;
+    background-color: #222;
+    color: #fff;
+}
+ActionBar {
+    color: white;
+    background-color: #222;
+}

@@ -1,0 +1,35 @@
+<Page loaded="loaded" class="page"> 
+
+    <StackLayout>
+
+        <Label text="{{ currentPlayer, questionNum + '. This Question is for ' + currentPlayer.name + ':' }}" class="heading" id="heading" />
+
+        <TextView text="{{ currentQuestion.question }}" editable="false" id="question" />
+
+        <ListView items="{{ answers }}" id="answers" >
+            <ListView.itemTemplate>
+                <StackLayout orientation="horizontal">
+                    <Button text="{{ text }}" onTap="submit" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+
+         <ListView items="{{ playerList }}" id="players" >
+            <ListView.itemTemplate>
+                <StackLayout orientation="horizontal">
+                    <Label text="{{ name }}" class="player" />
+                    <Label text="{{ totalscore }}" class="player" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>   
+
+<!--
+        <StackLayout orientation="horizontal">
+            <Label text="{{ currentPlayer.name }}" class="player" />
+            <Label text="{{ currentPlayerScore }}" class="player" />
+        </StackLayout>
+-->
+
+    </StackLayout>
+
+</Page>

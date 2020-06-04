@@ -1,0 +1,27 @@
+<Page loaded="loaded"> 
+
+    <StackLayout>
+
+        <Label text="Scores" />
+
+        <GridLayout columns="*, auto, auto" rows="80">
+            <Label row="0" col="0" text="Player" class="player" />
+            <Label row="0" col="1" text="Wins" class="player" />
+            <Label row="0" col="2" text="Score" class="player" />
+        </GridLayout>
+
+        <ListView items="{{ playerList }}" >
+            <ListView.itemTemplate>
+                <GridLayout columns="*, auto, auto" rows="80">
+                    <Label row="0" col="0" text="{{ name }}" class="player" />
+                    <Label row="0" col="1" text="{{ gameswon }}" class="player" />
+                    <Label row="0" col="2" text="{{ totalscore }}" class="player" />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>  
+
+        <Button text="Play Again" tap="back" class="done" />
+
+    </StackLayout>
+
+</Page>

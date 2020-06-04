@@ -1,0 +1,9 @@
+<Page loaded="loaded">
+
+    <StackLayout orientation="vertical">
+        <Image class="heads" src="res://icon_heads" stretch="none" horizontalAlignment="center" />
+        <Image class="title" src="res://trivia_and_chill" stretch="none" horizontalAlignment="center" />
+        <Button text="Play" tap="play" width="60%" />
+    </StackLayout>
+
+</Page>

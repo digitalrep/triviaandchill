@@ -1,0 +1,40 @@
+ListView {
+    width: 90%;
+    height: 380;
+}
+Label {
+    margin: 22;
+    font-size: 22sp;
+    color: #222;
+}
+Image {
+    margin-top: 20;
+}
+TextField {
+    border-width: 1;
+    border-style: solid;
+    border-color: #333;
+    margin: 14;
+    background-color: #fff;
+    padding: 4;
+}
+Page {
+    background-color: #fe6d79;
+}
+.add {
+    height: 60;
+}
+.done {
+    width: 96%;
+}
+.white {
+    color: #fff;
+}
+GridLayout {
+    width: 96%;
+}
+.player {
+    color: #fff;
+    font-size: 22sp;
+    line-height: 2;
+}
