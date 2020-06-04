@@ -1,4 +1,4 @@
-<Page loaded="loaded">
+<Page loaded="loaded" xmlns:lv="nativescript-ui-listview" xmlns="http://www.nativescript.org/tns.xsd">
 
     <StackLayout>
 
@@ -9,17 +9,31 @@
             <Button row="0" col="1" text="Add" tap="add" class="add" />
         </GridLayout>
 
+        <Label text="Select players for this round:" />
+
+        <lv:RadListView items="{{ playerList }}" >
+            <lv:RadListView.itemTemplate>
+                <GridLayout columns="*, 40" rows="80">
+                    <Label row="0" col="0" text="{{ name }}" class="white" />
+                    <Image row="0" col="1" src="res://ic_menu_delete" ios:visibility="collapsed" tap="delete" stretch="none" />
+                </GridLayout>
+            </lv:RadListView.itemTemplate>
+        </lv:RadListView>
+
+<!--
         <ListView items="{{ playerList }}" id="playerList" >
             <ListView.itemTemplate>
                 <GridLayout columns="*, 40" rows="80">
-                    
+
                     <Label row="0" col="0" text="{{ name }}" class="white" />
                     <Image row="0" col="1" src="res://ic_menu_delete" ios:visibility="collapsed" tap="delete" stretch="none" />
                 </GridLayout>
             </ListView.itemTemplate>
         </ListView>
+-->
 
         <Button text="Done" tap="done" class="done" />
 
     </StackLayout>
+
 </Page>

@@ -15,23 +15,33 @@ function PlayerListViewModel(items) {
             if(err) {
                 console.log("failed to open db ", err);
             } else {
+
+                db.execSQL("create table if not exists players(id integer primary key autoincrement, name varchar not null, gameswon integer null, totalscore integer null)", function(err, id) {
+                    console.log("error: ", err);
+                    console.log("create table id: ", id);                    
+                });
+                
                 db.all("select * from players where id > ? and id < ?", [0, 1000], function(err, resultSet) {
                     results = resultSet;
+                    console.log("length of resultset: ", resultSet.length);
                     console.log("Loaded result set is: ", resultSet);
                 });
+
             }
         });
 
         viewModel.empty();
 
-        results.forEach((player) => {
-            viewModel.push({
-                id: player[0],
-                name: player[1],
-                gameswon: player[2],
-                totalscore: player[3]
+        if(results.length > 0) {
+            results.forEach((player) => {
+                viewModel.push({
+                    id: player[0],
+                    name: player[1],
+                    gameswon: player[2],
+                    totalscore: player[3]
+                });
             });
-        });
+        }
 
     };
 
@@ -47,7 +57,7 @@ function PlayerListViewModel(items) {
             } else {
     
                 db.execSQL(
-                    "insert into players (id, name, gameswon, totalscore) values (null, ?, 0, 0);", name, function(err, id) {
+                    "insert into players (id, name, gameswon, totalscore) values (null, ?, 0, 0);", [name], function(err, id) {
                         console.log("error: ", err);
                         console.log("insert: The new record is: ", id);
                     } 
