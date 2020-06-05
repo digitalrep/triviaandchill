@@ -2,16 +2,16 @@
 
     <StackLayout>
 
-        <Label text="Add Players to Your Game:" />
+        <Label text="Add players:" />
 
         <GridLayout columns="*, 120" rows="80">
             <TextField row="0" col="0" id="player" text="{{ player }}" hint="Player Name" />
             <Button row="0" col="1" text="Add" tap="add" class="add" />
         </GridLayout>
 
-        <Label text="Select players for this round:" />
+        <Label text="Confirm players for this round:" />
 
-        <lv:RadListView items="{{ playerList }}" >
+        <lv:RadListView items="{{ playerList }}" id="playerList" >
             <lv:RadListView.itemTemplate>
                 <GridLayout columns="*, 40" rows="80">
                     <Label row="0" col="0" text="{{ name }}" class="white" />
