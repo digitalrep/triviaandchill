@@ -23,13 +23,6 @@
             </ListView.itemTemplate>
         </ListView>   
 
-<!--
-        <StackLayout orientation="horizontal">
-            <Label text="{{ currentPlayer.name }}" class="player" />
-            <Label text="{{ currentPlayerScore }}" class="player" />
-        </StackLayout>
--->
-
     </StackLayout>
 
 </Page>
