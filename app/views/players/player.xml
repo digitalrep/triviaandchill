@@ -20,6 +20,8 @@
             </lv:RadListView.itemTemplate>
         </lv:RadListView>
 
+        <Button text="Done" tap="done" class="done" />
+        
 <!--
         <ListView items="{{ playerList }}" id="playerList" >
             <ListView.itemTemplate>
@@ -31,8 +33,6 @@
             </ListView.itemTemplate>
         </ListView>
 -->
-
-        <Button text="Done" tap="done" class="done" />
 
     </StackLayout>
 
